@@ -1,16 +1,17 @@
 package com.example.websockets.controller;
 
 import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.example.websockkets.model.User;
 
 @Controller
 public class HomeController {
@@ -28,13 +29,6 @@ public class HomeController {
 
 		model.addAttribute("serverTime", formattedDate);
 
-		return "home";
-	}
-
-	@RequestMapping(value = "/user", method = RequestMethod.POST)
-	public String user(@Validated User user, Model model) {
-		System.out.println("User Page Requested");
-		model.addAttribute("userName", user.getUserName());
-		return "user";
+		return "index";
 	}
 }
