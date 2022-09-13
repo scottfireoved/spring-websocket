@@ -19,7 +19,7 @@
             }
             
             function connect() {
-                var socket = new SockJS('/spring-websocket-example/chat');
+                var socket = new SockJS('/spring-websocket-example/mdm-communication');
                 stompClient = Stomp.over(socket);  
                 stompClient.connect({}, function(frame) {
                     setConnected(true);

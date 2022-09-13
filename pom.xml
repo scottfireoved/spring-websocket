@@ -6,8 +6,8 @@
 	<artifactId>spring-websocket-example</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>Spring MVC Example</name>
-	<description>Spring MVC Hello World Example</description>
+	<name>Spring Websocket Example</name>
+	<description>Spring MVC Websocket Example</description>
 
 	<!-- Add Spring Web and MVC dependencies -->
 	<dependencies>

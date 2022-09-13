@@ -15,7 +15,7 @@ public class SocketController {
 	@MessageMapping("/chat")
     @SendTo("/topic/messages")
     public OutputMessage send(final Message message) throws Exception {
-
+		System.out.println("Sending Message: " + message.getText());
         final String time = new SimpleDateFormat("HH:mm").format(new Date());
         return new OutputMessage(message.getFrom(), message.getText(), time);
     }
